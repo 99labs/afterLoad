@@ -56,7 +56,7 @@
 		if (settings.loadInto != $(this))
 			var element = $(settings.loadInto);
 		else
-			var element = settings.loadInto;
+			var element = settings.loadInto; // default $(this)
 		
 		
 		
@@ -66,6 +66,10 @@
 		 * deve ser especificado em um
 		 * atributo "data-file", dentro do
 		 * elemento onde será carregado
+		 *
+		 * é necessário montar o caminho completo do
+		 * arquivo para não dar erro quando utilizado
+		 * com URLs Amigávies
 		*/
 		if (!settings.external)
 			var	src = settings.path + settings.folder + settings.src;
